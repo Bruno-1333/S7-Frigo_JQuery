@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reduce Food Waste</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+
+
+</head>
+<body>
+<h1>J'ai déposé un nouvel item dans le féfrigérateur communautaire :</h1>
+<main class="container">
+    <div class="row">
+        <div class="col">
+            <form id="form" action="index.html">
+                <label for="desc">Courte description (max. 100 caractères)&nbsp;<sup>*</sup></label>
+                <input id="desc" name="desc" type="text">
+                <label for="category">Catégorie&nbsp&nbsp;<sup>*</sup></label>
+                <select id="category" name="category">
+                    <option value="Dessert">Dessert</option>
+                    <option value="platPrincipal">Plat Principale</option>
+                    <option value="Entrée">Entrée</option>
+                </select>
+                <div id="portionsLayout">
+                    <div id="portionsLabel">
+                        <label for="portions">Portions disponibles&nbsp;<sup>*</sup></label>
+                        <p>(min. 2 sauf pour les desserts)</p>
+                    </div>
+                    <input id="portions" name="portions" type="number">
+                </div>
+                <label for="commentaires">Commentaires</label>
+                <p>(ex. instructions pour réchauffer)</p>
+                <textarea name="commentaires" id="commentaires" cols="30" rows="10"></textarea>
+                <label for="id">Mon identifiant&nbsp;<sup>*</sup> </label>
+                <p>(pour la traçabilité des aliments)</p>
+                <input id="id" name="id" type="text">
+                <div id="svpLayout">
+                    <input id="svp" name="svp" type="checkbox"><label for="svp">Svp&nbsp;remettre&nbsp;mon&nbsp;plat&nbsp;dans&nbsp;le&nbsp;réfrigérateur</label>
+                </div>
+                <div id="submit-reset-container">
+                    <input type="submit" name="submit" value="Soumettre">
+                    <input type="reset" name="reset" value="Annuler">
+                </div>
+            </form>
+        </div>
+        <div id="fridge" class="col">
+
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
